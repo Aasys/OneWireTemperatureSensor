@@ -11,7 +11,7 @@
 #define TCONV 0x44
 #define READ_SCRATCH 0xBE
 
-#define PIN27_OUT	fprint(f_gpio, "function 27 out")
+#define PIN27_OUT fprint(f_gpio, "function 27 out")
 #define PIN27_IN fprint(f_gpio, "function 27 in")
 #define PIN27_PULSE fprint(f_gpio, "function 27 pulse")
 #define PIN27_LOW fprint(f_gpio, "set 27 0")
@@ -184,7 +184,7 @@ void read_temp() {
 	int d_temp = 0;
 
 	// convert to decimal
-	for (int i = 0; i < 12; i++) { 
+	for (int i = 0; i < 11; i++) { 
 		if (temp[i] == 1)
 			d_temp = d_temp + two_power(i);
 	}
